@@ -150,7 +150,6 @@ public class SortingCities {
         if (cityNames.length == 0) {
             return null;
         } else {
-
             Arrays.sort(cityNames);
             return cityNames;
         }
