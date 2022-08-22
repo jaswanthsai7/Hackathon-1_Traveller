@@ -11,12 +11,15 @@ public class SortingCities {
         String[] cityNames = {"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
         // initialize and declare an array of city distance
         int[] distanceInKms = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
-        SortingCities sort = new SortingCities();
-        sort.sortWithDistance(distanceInKms, cityNames);
-        String[] cityUpperCase = sort.convertCityNamesToUppercase(cityNames);
+        // create a variable to call the methods
+        SortingCities sortingCities = new SortingCities();
+        sortingCities.sortWithDistance(distanceInKms, cityNames);
+        String[] cityUpperCase = sortingCities.convertCityNamesToUppercase(cityNames);
         System.out.println("The Uppercase City Names : " + Arrays.toString(cityUpperCase));
-        String city52Kms = sort.findCity52Kms(distanceInKms, cityNames);
+        String city52Kms = sortingCities.findCity52Kms(distanceInKms, cityNames);
         System.out.println(city52Kms);
+        String cityGreaterThanOrEqual270 = sortingCities.findCityGreaterThanOrEqual270(distanceInKms, cityNames);
+        System.out.println(cityGreaterThanOrEqual270);
     }
 
     /**
@@ -78,5 +81,15 @@ public class SortingCities {
         }
         return null;
 
+    }
+
+    public String findCityGreaterThanOrEqual270(int[] distanceInKms, String[] cityNames) {
+        for (int i = 0; i < distanceInKms.length; i++) {
+            if (distanceInKms[i] >= 270) {
+                return cityNames[i].concat(" : ").concat(String.valueOf(distanceInKms[i]));
+            }
+
+        }
+        return null;
     }
 }
