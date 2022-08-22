@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 
 import static org.junit.Assert.assertNull;
 
-public class SortingCitiesTest {
+public class SwitzerlandTravelPlanTest {
     SwitzerlandTravelPlan sortingCities;
 
     @Before
