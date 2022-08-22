@@ -91,5 +91,13 @@ public class SortingCitiesTest {
         Assertions.assertArrayEquals(expectedKms, actualResult);
     }
 
+    @Test
+    public void toCheckSortingWithCitySuccess() {
+        String[] cityNames = {"Bern", "Lucerne", "Grindelwald", "Engelberg"};
+        String[] expectedResult = {"Bern", "Engelberg", "Grindelwald", "Lucerne"};
+        String[] actualResult = sortingCities.sortingTheCities(cityNames);
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
 
 }
