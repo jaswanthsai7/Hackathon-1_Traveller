@@ -65,5 +65,13 @@ public class SortingCitiesTest {
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void toCheckUpperCaseFailure() {
+        String[] cityNames = {"NewYork", "Dallas"};
+        String[] expectedResult = {"NEWYORK", "DALLAS"};
+        String[] actualResult = sortingCities.convertCityNamesToUppercase(cityNames);
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
 
 }
