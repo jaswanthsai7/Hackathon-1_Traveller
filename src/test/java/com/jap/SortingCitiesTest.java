@@ -15,6 +15,7 @@ public class SortingCitiesTest {
 
     @After
     public void tearDown() {
+        sortingCities = null;
     }
 
     //write all the test cases here
