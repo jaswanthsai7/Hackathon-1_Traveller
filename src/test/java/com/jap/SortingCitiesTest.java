@@ -20,6 +20,7 @@ public class SortingCitiesTest {
 
     //write all the test cases here
     @Test
+    // A test case to check the success of the method findCity52Kms.
     public void toCheckFindCity52KmsSuccess() {
         int[] distanceInKms = {138, 118, 52, 136, 85, 276};
         String[] cityNames = {"Bern", "Interlaken", "Lucerne", "Grindelwald", "Engelberg", "Geneva"};
@@ -30,6 +31,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // A test case to check the failure of the method findCity52Kms.
     public void toCheckFindCity52KmsFailure() {
         int[] distanceInKms = {138, 118, 136, 85, 276};
         String[] cityNames = {"Bern", "Interlaken", "Grindelwald", "Engelberg", "Geneva"};
@@ -39,6 +41,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // This is a test case to check the success of the method findCityGreaterThanOrEqual270.
     public void toCheckFindCityGreaterThan270Success() {
         int[] distanceInKms = {138, 118, 136, 85, 276};
         String[] cityNames = {"Bern", "Interlaken", "Grindelwald", "Engelberg", "Geneva"};
@@ -49,6 +52,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // This is a test case to check the failure of the method findCityGreaterThanOrEqual270.
     public void toCheckFindCityGreaterThan270Failure() {
         int[] distanceInKms = {138, 118, 136, 85};
         String[] cityNames = {"Bern", "Interlaken", "Grindelwald", "Engelberg"};
@@ -59,6 +63,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // This is a test case to check the success of the method convertCityNamesToUppercase.
     public void toCheckUpperCaseSuccess() {
         String[] cityNames = {"Bern", "Intern"};
         String[] expectedResult = {"BERN", "INTERN"};
@@ -67,6 +72,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // This is a test case to check the failure of the method convertCityNamesToUppercase.
     public void toCheckUpperCaseFailure() {
         String[] cityNames = {"NewYork", "Dallas"};
         String[] expectedResult = {"NEWYORK", "DALLAS"};
@@ -75,6 +81,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // This is a test case to check the success of the method sortWithDistance.
     public void toCheckSortWithDistanceSuccess() {
         String[] cityNames = new String[0];
         int[] distanceInKms = {138, 52, 118, 136, 85, 276};
@@ -84,6 +91,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // This is a test case to check the failure of the method sortWithDistance.
     public void toCheckSortWithDistanceFailure() {
         String[] cityNames = {"Bern", "Lucerne", "Grindelwald", "Engelberg"};
         int[] distanceInKms = {52, 118, 136, 85};
@@ -93,6 +101,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // This is a test case to check the success of the method sortingTheCities.
     public void toCheckSortingWithCitySuccess() {
         String[] cityNames = {"Bern", "Lucerne", "Grindelwald", "Engelberg"};
         String[] expectedResult = {"Bern", "Engelberg", "Grindelwald", "Lucerne"};
@@ -101,6 +110,7 @@ public class SortingCitiesTest {
     }
 
     @Test
+    // This is a test case to check the failure of the method sortingTheCities.
     public void toCheckSortingWithCityFailure() {
         String[] cityNames = new String[0];
         String[] expectedResult = null;
