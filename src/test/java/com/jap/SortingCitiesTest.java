@@ -35,9 +35,8 @@ public class SortingCitiesTest {
     public void toCheckFindCity52KmsFailure() {
         int[] distanceInKms = {138, 118, 136, 85, 276};
         String[] cityNames = {"Bern", "Interlaken", "Grindelwald", "Engelberg", "Geneva"};
-        String expectedResult = null;
         String actualResult = sortingCities.findCity52Kms(distanceInKms, cityNames);
-        Assertions.assertEquals(expectedResult, actualResult);
+        Assertions.assertNull(actualResult);
     }
 
     @Test
@@ -56,9 +55,8 @@ public class SortingCitiesTest {
     public void toCheckFindCityGreaterThan270Failure() {
         int[] distanceInKms = {138, 118, 136, 85};
         String[] cityNames = {"Bern", "Interlaken", "Grindelwald", "Engelberg"};
-        String expectedResult = null;
         String actualResult = sortingCities.findCityGreaterThanOrEqual270(distanceInKms, cityNames);
-        Assertions.assertEquals(expectedResult, actualResult);
+        Assertions.assertNull(actualResult);
 
     }
 
@@ -69,6 +67,7 @@ public class SortingCitiesTest {
         String[] expectedResult = {"BERN", "INTERN"};
         String[] actualResult = sortingCities.convertCityNamesToUppercase(cityNames);
         Assertions.assertArrayEquals(expectedResult, actualResult);
+
     }
 
     @Test
@@ -85,9 +84,8 @@ public class SortingCitiesTest {
     public void toCheckSortWithDistanceSuccess() {
         String[] cityNames = new String[0];
         int[] distanceInKms = {138, 52, 118, 136, 85, 276};
-        int[] expectedKms = null;
         int[] actualResult = sortingCities.sortWithDistance(distanceInKms, cityNames);
-        Assertions.assertArrayEquals(expectedKms, actualResult);
+        Assertions.assertArrayEquals(null, actualResult);
     }
 
     @Test
@@ -113,8 +111,7 @@ public class SortingCitiesTest {
     // This is a test case to check the failure of the method sortingTheCities.
     public void toCheckSortingWithCityFailure() {
         String[] cityNames = new String[0];
-        String[] expectedResult = null;
         String[] actualResult = sortingCities.sortingTheCities(cityNames);
-        Assertions.assertArrayEquals(expectedResult, actualResult);
+        Assertions.assertArrayEquals(null, actualResult);
     }
 }
