@@ -106,6 +106,4 @@ public class SortingCitiesTest {
         String[] actualResult = sortingCities.sortingTheCities(cityNames);
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
-
-
 }
