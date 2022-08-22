@@ -47,5 +47,15 @@ public class SortingCitiesTest {
 
     }
 
+    @Test
+    public void toCheckFindCityGreaterThan270Failure() {
+        int[] distanceInKms = {138, 118, 136, 85};
+        String[] cityNames = {"Bern", "Interlaken", "Grindelwald", "Engelberg"};
+        String expectedResult = null;
+        String actualResult = sortingCities.findCityGreaterThanOrEqual270(distanceInKms, cityNames);
+        Assertions.assertEquals(expectedResult, actualResult);
+
+    }
+
 
 }
