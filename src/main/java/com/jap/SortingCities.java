@@ -13,6 +13,10 @@ public class SortingCities {
         int[] distanceInKms = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
         SortingCities sort = new SortingCities();
         sort.sortWithDistance(distanceInKms, cityNames);
+        String[] cityUpperCase = sort.convertCityNamesToUppercase(cityNames);
+        System.out.println("The Uppercase City Names : " + Arrays.toString(cityUpperCase));
+        String city52Kms = sort.findCity52Kms(distanceInKms, cityNames);
+        System.out.println(city52Kms);
     }
 
     /**
@@ -58,4 +62,21 @@ public class SortingCities {
 
     }
 
+    /**
+     * It takes an array of integers and an array of strings as input, and returns a string
+     *
+     * @param distanceInKms an array of integers
+     * @param cityNames     ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San
+     *                      Diego", "Dallas", "San Jose"]
+     * @return The city name and distance in Kms.
+     */
+    public String findCity52Kms(int[] distanceInKms, String[] cityNames) {
+        for (int i = 0; i < distanceInKms.length; i++) {
+            if (distanceInKms[i] == 52) {
+                return cityNames[i].concat(" : ").concat(String.valueOf(distanceInKms[i]));
+            }
+        }
+        return null;
+
+    }
 }
