@@ -28,4 +28,14 @@ public class SortingCitiesTest {
 
     }
 
+    @Test
+    public void toCheckFindCity52KmsFailure() {
+        int[] distanceInKms = {138, 118, 136, 85, 276};
+        String[] cityNames = {"Bern", "Interlaken", "Grindelwald", "Engelberg", "Geneva"};
+        String expectedResult = null;
+        String actualResult = sortingCities.findCity52Kms(distanceInKms, cityNames);
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+
 }
