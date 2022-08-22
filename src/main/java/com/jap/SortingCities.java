@@ -56,7 +56,7 @@ public class SortingCities {
      * @param city     an array of strings
      */
     public int[] sortWithDistance(int[] distance, String[] city) {
-        int temp = 0;
+        int temp;
         String tempCityNew;
         if (distance.length == 0 || city.length == 0) {
             return null;
@@ -88,7 +88,7 @@ public class SortingCities {
      * @return The city array is being returned.
      */
     public String[] sortWithCity(int[] distance, String[] city) {
-        int temp = 0;
+        int temp;
         String tempCityNew;
         for (int i = 0; i < distance.length; i++) {
             for (int j = 0; j < city.length - 1 - i; j++) {
