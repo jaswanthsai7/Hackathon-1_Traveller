@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
+import static org.junit.Assert.assertNull;
+
 public class SortingCitiesTest {
     SortingCities sortingCities;
 
@@ -113,5 +115,13 @@ public class SortingCitiesTest {
         String[] cityNames = new String[0];
         String[] actualResult = sortingCities.sortingTheCities(cityNames);
         Assertions.assertArrayEquals(null, actualResult);
+    }
+
+    @Test
+    // A test case to check the failure of the method sortWithDistance.
+    public void toCheckDistanceFailures() {
+        int[] distance = {40, 50, 78, 15, 27, 62};
+        String[] cityNames = new String[0];
+        assertNull(sortingCities.sortWithDistance(distance, cityNames));
     }
 }
