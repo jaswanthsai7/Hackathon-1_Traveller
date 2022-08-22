@@ -99,5 +99,13 @@ public class SortingCitiesTest {
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void toCheckSortingWithCityFailure() {
+        String[] cityNames = new String[0];
+        String[] expectedResult = null;
+        String[] actualResult = sortingCities.sortingTheCities(cityNames);
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
 
 }
