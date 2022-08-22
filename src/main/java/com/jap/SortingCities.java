@@ -16,5 +16,9 @@ public class SortingCities {
         return cityNames;
     }
 
+    public int[] sortingDistance(int[] distanceInKms) {
+        Arrays.sort(distanceInKms);
+        return distanceInKms;
+    }
 
 }
