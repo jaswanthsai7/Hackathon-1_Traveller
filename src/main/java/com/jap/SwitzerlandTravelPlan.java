@@ -5,14 +5,14 @@ import java.util.Arrays;
 /**
  * Hello world!
  */
-public class SortingCities {
+public class SwitzerlandTravelPlan {
     public static void main(String[] args) {
         // initialize and declare an array of city names
         String[] cityNames = {"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
         // initialize and declare an array of city distance
         int[] distanceInKms = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
         // create a variable to call the methods
-        SortingCities sortingCities = new SortingCities();
+        SwitzerlandTravelPlan sortingCities = new SwitzerlandTravelPlan();
         // calling the method to print the sorting with distance
         int[] sortedDistance = sortingCities.sortWithDistance(distanceInKms, cityNames);
         System.out.println("The Distance = " + Arrays.toString(sortedDistance));

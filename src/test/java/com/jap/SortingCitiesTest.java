@@ -8,11 +8,11 @@ import org.junit.jupiter.api.Assertions;
 import static org.junit.Assert.assertNull;
 
 public class SortingCitiesTest {
-    SortingCities sortingCities;
+    SwitzerlandTravelPlan sortingCities;
 
     @Before
     public void setUp() {
-        sortingCities = new SortingCities();
+        sortingCities = new SwitzerlandTravelPlan();
     }
 
     @After
