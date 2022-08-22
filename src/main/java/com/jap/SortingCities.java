@@ -140,6 +140,12 @@ public class SortingCities {
         return null;
     }
 
+    /**
+     * It takes an array of strings, sorts them alphabetically, and returns the sorted array
+     *
+     * @param cityNames an array of strings
+     * @return The method is returning the sorted array of city names.
+     */
     public String[] sortingTheCities(String[] cityNames) {
         if (cityNames.length == 0) {
             return null;
