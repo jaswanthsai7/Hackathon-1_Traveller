@@ -16,7 +16,7 @@ public class SortingCities {
         // calling the method to print the sorting with distance
         int[] sortedDistance = sortingCities.sortWithDistance(distanceInKms, cityNames);
         System.out.println("The Distance = " + Arrays.toString(sortedDistance));
-        // calling the method to print the sorting with distance
+        // calling the method to print the sorting with distance along with city
         String[] SortedCities = sortingCities.sortWithCity(distanceInKms, cityNames);
         System.out.println("The cities = " + Arrays.toString(SortedCities));
         // storing the uppercase of cities by calling the method
@@ -29,6 +29,9 @@ public class SortingCities {
         // store and print the city name equal or greater than 270kms
         String cityGreaterThanOrEqual270 = sortingCities.findCityGreaterThanOrEqual270(distanceInKms, cityNames);
         System.out.println(cityGreaterThanOrEqual270);
+        // store and print the sort of city names
+        String[] citiesSort = sortingCities.sortingTheCities(cityNames);
+        System.out.println("The city names in order : " + Arrays.toString(citiesSort));
     }
 
     /**
