@@ -13,8 +13,12 @@ public class SortingCities {
         int[] distanceInKms = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
         // create a variable to call the methods
         SortingCities sortingCities = new SortingCities();
-        // calling the method to print the sorting of city with distance
-        sortingCities.sortWithDistance(distanceInKms, cityNames);
+        // calling the method to print the sorting with distance
+        int[] sortedDistance = sortingCities.sortWithDistance(distanceInKms, cityNames);
+        System.out.println("The Distance = " + Arrays.toString(sortedDistance));
+        // calling the method to print the sorting with distance
+        String[] SortedCities = sortingCities.sortWithCity(distanceInKms, cityNames);
+        System.out.println("The cities = " + Arrays.toString(SortedCities));
         // storing the uppercase of cities by calling the method
         String[] cityUpperCase = sortingCities.convertCityNamesToUppercase(cityNames);
         // print the uppercase city names
@@ -48,7 +52,39 @@ public class SortingCities {
      * @param distance an array of integers
      * @param city     an array of strings
      */
-    public void sortWithDistance(int[] distance, String[] city) {
+    public int[] sortWithDistance(int[] distance, String[] city) {
+        int temp = 0;
+        String tempCityNew;
+        if (distance.length == 0 || city.length == 0) {
+            return null;
+        } else {
+            for (int i = 0; i < distance.length; i++) {
+                for (int j = 0; j < city.length - 1 - i; j++) {
+                    if (distance[j] > distance[j + 1]) {
+                        temp = distance[j];
+                        distance[j] = distance[j + 1];
+                        distance[j + 1] = temp;
+                        tempCityNew = city[j];
+                        city[j] = city[j + 1];
+                        city[j + 1] = tempCityNew;
+
+
+                    }
+                }
+            }
+        }
+        return distance;
+    }
+
+    /**
+     * The function takes in two arrays, one of integers and one of strings, and returns the string array sorted by the
+     * integer array
+     *
+     * @param distance an array of integers
+     * @param city     an array of strings
+     * @return The city array is being returned.
+     */
+    public String[] sortWithCity(int[] distance, String[] city) {
         int temp = 0;
         String tempCityNew;
         for (int i = 0; i < distance.length; i++) {
@@ -65,9 +101,7 @@ public class SortingCities {
                 }
             }
         }
-        System.out.println("The city names : " + Arrays.toString(city));
-        System.out.println("The distance from Zurich : " + Arrays.toString(distance));
-
+        return city;
     }
 
     /**
@@ -104,5 +138,15 @@ public class SortingCities {
 
         }
         return null;
+    }
+
+    public String[] sortingTheCities(String[] cityNames) {
+        if (cityNames.length == 0) {
+            return null;
+        } else {
+
+            Arrays.sort(cityNames);
+            return cityNames;
+        }
     }
 }
