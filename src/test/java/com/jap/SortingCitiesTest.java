@@ -82,5 +82,14 @@ public class SortingCitiesTest {
         Assertions.assertArrayEquals(expectedKms, actualResult);
     }
 
+    @Test
+    public void toCheckSortWithDistanceFailure() {
+        String[] cityNames = {"Bern", "Lucerne", "Grindelwald", "Engelberg"};
+        int[] distanceInKms = {52, 118, 136, 85};
+        int[] expectedKms = {52, 85, 118, 136};
+        int[] actualResult = sortingCities.sortWithDistance(distanceInKms, cityNames);
+        Assertions.assertArrayEquals(expectedKms, actualResult);
+    }
+
 
 }
