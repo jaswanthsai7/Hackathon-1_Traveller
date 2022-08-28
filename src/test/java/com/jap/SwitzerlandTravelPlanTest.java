@@ -124,4 +124,11 @@ public class SwitzerlandTravelPlanTest {
         String[] cityNames = new String[0];
         assertNull(sortingCities.sortWithDistance(distance, cityNames));
     }
+
+    @Test
+    // Checking the failure of the method findCity52Kms.
+    public void toCheckTheCityFrom52KmFailure() {
+        Assertions.assertNull(sortingCities.findCity52Kms(new int[]{0}, null));
+        Assertions.assertNull(sortingCities.findCity52Kms(new int[]{1, 2, 3, 5}, null));
+    }
 }
