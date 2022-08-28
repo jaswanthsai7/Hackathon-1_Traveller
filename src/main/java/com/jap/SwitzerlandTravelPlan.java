@@ -67,6 +67,7 @@ public class SwitzerlandTravelPlan {
                         temp = distance[j];
                         distance[j] = distance[j + 1];
                         distance[j + 1] = temp;
+                        // sorting the city according to the distance
                         tempCityNew = city[j];
                         city[j] = city[j + 1];
                         city[j + 1] = tempCityNew;
